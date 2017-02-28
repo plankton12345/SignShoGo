@@ -1,0 +1,10 @@
+name: CommandRank
+main: plugin\plugin
+version: 0.1
+api: [1.13.1]
+load: POSTWORLD
+author: plankton12345
+commands:
+ RankBuy:
+  description: "player情報検索plugin"
+  usage: "Usage:/RankBuy"
