@@ -47,7 +47,8 @@ public function onCommand(CommandSender $sender, Command $command, $label, array
 }
 public function PlayerJoin(PlayerJoinEvent $event) {
     $player = $event->getPlayer();
-    
-    $player->setDisplayName("ここに入力"); 
+    $name = $player->getName();
+    $dsname = $this->config->get("{$name}");
+    $player->setDisplayName("{$dsname}"); 
 }
 }
