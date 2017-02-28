@@ -48,7 +48,11 @@ public function onCommand(CommandSender $sender, Command $command, $label, array
 public function PlayerJoin(PlayerJoinEvent $event) {
     $player = $event->getPlayer();
     $name = $player->getName();
+    if($this->config->exists("$name")){
     $dsname = $this->config->get("{$name}");
     $player->setDisplayName("{$dsname}"); 
 }
+
 }
+    
+ }
